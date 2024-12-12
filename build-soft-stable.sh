@@ -85,7 +85,7 @@ sudo ldconfig
 # [ "$1" != "phd2" ] && exit
 
 cd "$ROOTDIR"
-[ ! -d "phd2" ] && { git clone https://github.com/OpenPHDGuiding/phd2.git || { echo "Failed to clone PHD2"; exit 1; } }
+[ ! -d "phd2" ] && { git clone --depth 1 https://github.com/OpenPHDGuiding/phd2.git || { echo "Failed to clone PHD2"; exit 1; } }
 cd phd2
 git fetch origin
 git switch -d --discard-changes $PHD2_COMMIT
