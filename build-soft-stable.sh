@@ -82,7 +82,7 @@ sudo make install || { echo "KStars installation failed"; exit 1; }
 
 sudo ldconfig
 
-[ "$1" != "phd2" ] && exit
+# [ "$1" != "phd2" ] && exit
 
 cd "$ROOTDIR"
 [ ! -d "phd2" ] && { git clone https://github.com/OpenPHDGuiding/phd2.git || { echo "Failed to clone PHD2"; exit 1; } }
